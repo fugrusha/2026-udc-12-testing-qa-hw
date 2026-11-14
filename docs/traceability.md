@@ -12,11 +12,11 @@
 | T6 | 30000 коп. на користувача і київську дату взяття | TC-17, TC-18, TC-19, TC-20, TC-21, TC-22, TC-25, TC-26, TC-27, TC-36, TC-37 | `app/test/spec/tariffs.test.js` › `T6: TC-18 daily ledger by rider and Kyiv pickup date`; `T6, T10: TC-36 daily ledger by rider and Kyiv pickup date`; `T6, T10: TC-37 daily ledger by rider and Kyiv pickup date` | покрито | Частковий залишок, нова дата, перетин півночі, незалежні користувачі, різниця Kyiv/UTC |
 | T7 | Збір 15000 поза зоною | TC-16, TC-19, TC-23, TC-24, TC-27, TC-30, TC-35 | `app/test/spec/tariffs.test.js` › `T7: TC-23 outside-zone return`; `T5, T7: TC-16 student pays the full zone fee` | покрито | Не зменшується пільгою, нічною знижкою або лімітом |
 | T8 | Понад 24 год + 200000 коп., незалежно від T7 | TC-25, TC-26, TC-27, TC-28 | `app/test/spec/tariffs.test.js` › `T8, T6: TC-25 exactly 24 hours`; `T8, T7, T6: TC-27 both independent fees` | покрито | Межа 24 год, обидва збори |
-| T9 | Цілі копійки, формат і рядки чека | TC-28 | `app/test/spec/tariffs.test.js` › `T9, T8: TC-28 integer kopecks and itemised receipt` | частково | Досяжний чек перевірено; приклад дробової копійки T9 не задає досяжної поїздки; Q-4 |
-| T10 | Нічна знижка 30 % | TC-29, TC-30, TC-31, TC-36, TC-37 | `app/test/spec/tariffs.test.js` › `T10: TC-29 fully nighttime ride`; `T10, T7: TC-30 night discount excludes fee` | частково | Однозначна повністю нічна поїздка; перетини і поєднання — Q-1–Q-4 |
+| T9 | Цілі копійки, формат і рядки чека | TC-28 | `app/test/spec/tariffs.test.js` › `T9, T8: TC-28 integer kopecks and itemised receipt` | частково | Досяжний чек перевірено; приклад дробової копійки T9 не задає досяжної поїздки; Q-4, Q-5 |
+| T10 | Нічна знижка 30 % | TC-29, TC-30, TC-31, TC-36, TC-37 | `app/test/spec/tariffs.test.js` › `T10: TC-29 fully nighttime ride`; `T10, T7: TC-30 night discount excludes fee` | частково | Однозначна повністю нічна поїздка; перетини і поєднання — Q-1–Q-5 |
 
 ## Підсумок
 
 - Правил із принаймні одним тест-кейсом: **10 з 10**; повністю покрито однозначну частину 8 правил, T9 і T10 частково.
 - Правил із принаймні одним автотестом: **10 з 10**; T9 і T10 частково через описані межі специфікації.
-- Відкриті питання: **Q-1–Q-4**. Спірні комбінації не автоматизувати до відповіді власника продукту; перевіряти лише однозначну частину.
+- Відкриті питання: **Q-1–Q-5** (Q-5 додано за наслідками Task C). Спірні комбінації не автоматизувати до відповіді власника продукту; перевіряти лише однозначну частину.
